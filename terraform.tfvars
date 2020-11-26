@@ -1,62 +1,62 @@
 policies = [
   {
-    name  = "root"
     type  = "adm"
+    name  = "root"
     notes = "super admin policy"
   },
   {
-    name  = "ssh"
     type  = "sec"
+    name  = "ssh"
     notes = "full admin for the ssh secrets engine"
   },
   {
-    name  = "ssh-root"
     type  = "global"
+    name  = "ssh-root"
     notes = "gives access to all ssh roles"
   },
   {
-    name  = "pki-ca"
     type  = "sec"
+    name  = "pki-ca"
     notes = "full admin access to main ca"
   },
   {
-    name  = "pki-int"
     type  = "sec"
+    name  = "pki-int"
     notes = "full admin access to main int ca"
   },
   {
-    name  = "pki-consul"
     type  = "sec"
+    name  = "pki-consul"
     notes = "full admin access to consul int ca"
   },
   {
-    name  = "sys-monitor"
     type  = "adm"
+    name  = "sys-monitor"
     notes = "gives read access to monitor endpoint"
   },
   {
-    name  = "consul"
     type  = "sec"
+    name  = "consul"
     notes = "full admin access to consul secrets engine"
   },
   {
-    name  = "consul-root"
     type  = "global"
+    name  = "consul-root"
     notes = "gives access to consul root token"
   },
   {
-    name  = "policy-admin"
     type  = "svc"
+    name  = "policy-admin"
     notes = "gives the policy sync service the ability to manage vault policies"
   },
   {
-    name  = "kv"
     type  = "sec"
+    name  = "kv"
     notes = "full admin access to kv store"
   },
   {
-    name  = "pki-consul-server"
     type  = "global"
+    name  = "pki-consul-server"
     notes = "ability to generate consul server certs"
   },
 ]

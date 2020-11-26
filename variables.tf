@@ -1,7 +1,7 @@
 variable "policies" {
   type = list(object({
-    name  = string
     type  = string
+    name  = string
     notes = string
   }))
 }
