@@ -1,12 +1,12 @@
 policies = [
   {
-    name  = "adm-vault"
-    type  = "admin"
+    name  = "root"
+    type  = "adm"
     notes = "super admin policy"
   },
   {
-    name  = "adm-ssh"
-    type  = "admin"
+    name  = "ssh"
+    type  = "sec"
     notes = "full admin for the ssh secrets engine"
   },
   {
@@ -15,28 +15,28 @@ policies = [
     notes = "gives access to all ssh roles"
   },
   {
-    name  = "adm-pki-ca"
-    type  = "admin"
+    name  = "pki-ca"
+    type  = "sec"
     notes = "full admin access to main ca"
   },
   {
-    name  = "adm-pki-int"
-    type  = "admin"
+    name  = "pki-int"
+    type  = "sec"
     notes = "full admin access to main int ca"
   },
   {
-    name  = "adm-pki-consul"
-    type  = "admin"
+    name  = "pki-consul"
+    type  = "sec"
     notes = "full admin access to consul int ca"
   },
   {
-    name  = "adm-sys-monitor"
-    type  = "admin"
+    name  = "sys-monitor"
+    type  = "adm"
     notes = "gives read access to monitor endpoint"
   },
   {
-    name  = "adm-consul"
-    type  = "admin"
+    name  = "consul"
+    type  = "sec"
     notes = "full admin access to consul secrets engine"
   },
   {
@@ -45,13 +45,13 @@ policies = [
     notes = "gives access to consul root token"
   },
   {
-    name  = "service-policy-admin"
-    type  = "service"
+    name  = "policy-admin"
+    type  = "svc"
     notes = "gives the policy sync service the ability to manage vault policies"
   },
   {
-    name  = "adm-kv"
-    type  = "admin"
+    name  = "kv"
+    type  = "sec"
     notes = "full admin access to kv store"
   },
   {

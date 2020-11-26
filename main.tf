@@ -18,6 +18,6 @@ locals {
 
 resource "vault_policy" "policy" {
   for_each = local.policies
-  name     = each.key
+  name     = format("%s-%s", each.value.type, each.key)
   policy   = file(format("./policies/%s/%s.hcl", each.value.type, each.key))
 }

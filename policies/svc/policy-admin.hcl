@@ -11,7 +11,7 @@ path "sys/policies/acl/+" {
   capabilities = ["create", "read", "update", "delete"]
 }
 
-path "sys/policies/acl/service-policy-admin" {
+path "sys/policies/acl/svc-policy-admin" {
   capabilities = ["read"]
 }
 
