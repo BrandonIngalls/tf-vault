@@ -10,7 +10,7 @@ policies = [
     notes = "full admin for the ssh secrets engine"
   },
   {
-    type  = "global"
+    type  = "cap"
     name  = "ssh-root"
     notes = "gives access to all ssh roles"
   },
@@ -40,7 +40,7 @@ policies = [
     notes = "full admin access to consul secrets engine"
   },
   {
-    type  = "global"
+    type  = "cap"
     name  = "consul-root"
     notes = "gives access to consul root token"
   },
@@ -55,7 +55,7 @@ policies = [
     notes = "full admin access to kv store"
   },
   {
-    type  = "global"
+    type  = "cap"
     name  = "pki-consul-server"
     notes = "ability to generate consul server certs"
   },
