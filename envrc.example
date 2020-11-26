@@ -1,0 +1,8 @@
+ROLE_ID='FILL_THIS_IN'
+SECRET_ID='FILL_THIS_IN'
+
+export VAULT_TOKEN="$(\
+  echo -n "${SECRET_ID}" \
+    | vault write -field token auth/approle/login role_id="${ROLE_ID}" secret_id=-)"
+
+export CONSUL_HTTP_TOKEN="$(vault read -field token consul/creds/terraform-policies-rw)"
