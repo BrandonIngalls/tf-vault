@@ -13,11 +13,11 @@ provider "vault" {
 }
 
 locals {
-  policies = toset([for p in var.policies : p.name])
+  policies = { for p in var.policies : p.name => { "type" = p.type } }
 }
 
 resource "vault_policy" "policy" {
   for_each = local.policies
-  name     = each.value
-  policy   = file(format("./policies/%s.hcl", each.value))
+  name     = each.key
+  policy   = file(format("./policies/%s/%s.hcl", each.value.type, each.key))
 }
